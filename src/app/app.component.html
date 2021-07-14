@@ -1,0 +1,32 @@
+<div class="container">
+<div class="header" style="text-align: center;">
+<h1>
+  {{title}}
+</h1>
+<div class="search-bar">
+  <input type="text" class="form-control" name="username" [(ngModel)]="username" (ngModelChange)="Search()"
+  placeholder="Enter Username to Search">
+</div>
+  <div class="table">
+  <table border="1">
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+
+  </tr>
+  <tr *ngFor="let user of userData">
+    <th>{{user.id}}</th>
+    <th>{{user.name}}</th>
+    <th>{{user.username}}</th>
+    <th>{{user.email}}</th>
+    
+
+   
+  </tr>
+  </table>
+</div>
+
+</div>
+</div>
